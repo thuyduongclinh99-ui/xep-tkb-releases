@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xếp thời khóa biểu tự động</title>
+<meta name="description" content="Phần mềm xếp thời khóa biểu tự động cho trường THCS — tải file phân công chuyên môn lên, bấm một nút là có TKB.">
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --ink:#1d2433; --muted:#5b6577; --brand:#2f6fde; --brand-ink:#fff; --line:#e3e7ef; --warn:#fff6e0; --warn-line:#f0c24b; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#121620; --card:#1b2130; --ink:#e7ebf3; --muted:#9aa4b7; --brand:#5b8ff0; --line:#2a3245; --warn:#2c2616; --warn-line:#8a6d1f; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:2rem; margin:0 0 4px; }
+  .lead { color:var(--muted); margin:0 0 24px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 24px; margin:16px 0; }
+  .dl { display:inline-block; background:var(--brand); color:var(--brand-ink); text-decoration:none; font-weight:600;
+        padding:14px 28px; border-radius:10px; font-size:1.1rem; }
+  .dl:hover { filter:brightness(1.08); }
+  .small { color:var(--muted); font-size:.9rem; }
+  ol, ul { padding-left:1.3em; margin:8px 0; }
+  li { margin:4px 0; }
+  .warn { background:var(--warn); border-left:4px solid var(--warn-line); padding:10px 14px; border-radius:6px; }
+  table { width:100%; border-collapse:collapse; }
+  td { border-top:1px solid var(--line); padding:8px 6px; vertical-align:top; }
+  td:first-child { font-weight:600; width:38%; }
+  h2 { font-size:1.25rem; margin:0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Xếp thời khóa biểu tự động</h1>
+  <p class="lead">Dành cho trường THCS. Tải file phân công chuyên môn lên, bấm <b>Xếp TKB</b> — phần mềm tự xếp toàn bộ
+    thời khóa biểu, không cần kéo đổi tiết bằng tay, rồi xuất ra Excel.</p>
+
+  <div class="card">
+    <a class="dl" id="dl" href="https://github.com/thuyduongclinh99-ui/xep-tkb-releases/releases/latest/download/XepTKB-Setup.exe">⬇ Tải về cho Windows</a>
+    <p class="small">Windows 10/11 (64-bit) · khoảng 65 MB · dùng thử miễn phí 7 ngày · không cần internet khi sử dụng</p>
+  </div>
+
+  <div class="card">
+    <h2>Cài đặt</h2>
+    <ol>
+      <li>Bấm <b>Tải về cho Windows</b>, mở file <b>XepTKB-Setup.exe</b> vừa tải.</li>
+      <li>Bấm <b>Next</b> → <b>Install</b>. Không cần quyền quản trị.</li>
+      <li>Mở phần mềm bằng biểu tượng <b>Xếp thời khóa biểu</b> trên Desktop, đặt mật khẩu và chép lại mã khôi phục.</li>
+    </ol>
+    <p class="warn">Nếu Windows hiện <b>“Windows protected your PC”</b>: bấm <b>More info</b> → <b>Run anyway</b>.
+      Phần mềm chưa có chữ ký số nên Windows cảnh báo, không phải virus.</p>
+  </div>
+
+  <div class="card">
+    <h2>Phần mềm làm được gì</h2>
+    <ul>
+      <li>Đọc file Excel phân công chuyên môn; giữ nguyên nguyện vọng giáo viên khi có PCCM mới.</li>
+      <li>Không trùng tiết; mỗi giáo viên có ngày nghỉ, ít tiết trống, buổi có dạy ít nhất 2 tiết.</li>
+      <li>Nguyện vọng nghỉ/tránh từng buổi, tiết; lịch cố định (ôn tập, HSG); tiết kiểm tra tập trung.</li>
+      <li>Không xếp được thì chỉ ra đúng nguyện vọng đang mâu thuẫn.</li>
+      <li>Xuất 2 file Excel: TKB lớp và TKB giáo viên (kèm số tiết).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Câu hỏi thường gặp</h2>
+    <table>
+      <tr><td>Hết 7 ngày dùng thử?</td><td>Liên hệ người bán để nhận <b>mã kích hoạt</b>, nhập ở màn hình đăng nhập hoặc tab Cài đặt. Dữ liệu vẫn giữ nguyên.</td></tr>
+      <tr><td>Cập nhật phiên bản mới?</td><td>Tự động: khi có bản mới, phần mềm hiện nút <b>“Có bản mới”</b> ở góc trên — bấm <b>Cập nhật ngay</b>. Không cần cài lại.</td></tr>
+      <tr><td>Dữ liệu lưu ở đâu?</td><td>Trên máy của bạn (thư mục Documents\XepTKB). Phần mềm không gửi dữ liệu đi đâu; chỉ hỏi máy chủ xem có bản mới không.</td></tr>
+      <tr><td>Gỡ cài đặt?</td><td>Settings → Apps → Xếp thời khóa biểu → Uninstall. Dữ liệu trong Documents\XepTKB vẫn còn.</td></tr>
+    </table>
+  </div>
+  <p class="small">Các phiên bản: <a href="https://github.com/thuyduongclinh99-ui/xep-tkb-releases/releases">danh sách phát hành</a></p>
+</main>
+</body>
+</html>
